@@ -1,0 +1,29 @@
+@use "../global" as global;
+.c-new-articles__archive-link {
+  display: block;
+  max-width: 161px;
+  border: 1px solid global.$color-accent-1;
+  padding: calc(8px - 1px) calc(26px - 1px);
+  border-radius: 20px 20px 0px 20px;
+  background-color: global.$color-accent-1;
+  color: global.$color-main-4;
+  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 3.6px;
+  transition: 0.3s;
+
+  @include global.mq(lg) {
+    margin-inline: auto;
+    max-width: 172px;
+    margin-top: 49px;
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+
+  &:hover {
+    color: global.$color-accent-1;
+    background-color: global.$color-main-4;
+  }
+}

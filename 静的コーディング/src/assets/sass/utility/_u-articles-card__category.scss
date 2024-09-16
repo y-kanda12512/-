@@ -1,0 +1,17 @@
+@use "../global" as global;
+
+.u-articles-card__category-new {
+  color: global.$color-accent-1;
+}
+
+.u-articles-card__category-tips {
+  color: global.$color-accent-2;
+}
+
+.u-articles-card__category-news {
+  color: global.$color-accent-3;
+}
+
+.u-articles-card__category-interview {
+  color: global.$color-accent-4;
+}

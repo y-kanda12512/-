@@ -1,0 +1,24 @@
+// スクロール後のドロワー、サーチボタン
+.u-header__btn-area-column {
+  .p-header__btn-area-inner {
+    padding: 28px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+.u-header__btn-area-row {
+  .p-header__btn-area-inner {
+    padding: 20px 32px 20px 40px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 48px;
+  }
+}
+
+.u-header__btn-area-hidden {
+  display: none;
+  transform: translateY(-100%);
+}

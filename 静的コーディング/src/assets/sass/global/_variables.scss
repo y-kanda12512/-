@@ -1,0 +1,39 @@
+$color-base-1: #e6edf3;
+$color-base-2: #daeff8;
+
+$color-main-1: #629de2;
+$color-main-2: #343436;
+$color-main-3: #676e87;
+$color-main-4: #fff;
+
+$color-accent-1: #135097;
+$color-accent-2: #42a0ad;
+$color-accent-3: #c88dec;
+$color-accent-4: #9c8cff;
+$color-accent-5: #dde1f0;
+$color-accent-6: #2a84bf;
+
+$color-black: #241919;
+
+$ff-base: "Noto Sans JP", sans-serif;
+$ff-sub: "Zen Maru Gothic", serif;
+
+$breakpoints: (
+  mini: "screen and (max-width: 374px)",
+  sm: "screen and (min-width: 480px)",
+  md: "screen and (min-width: 768px)",
+  lg: "screen and (min-width: 900px)",
+  lg-x: "screen and (min-width:1100px)",
+  xl: "screen and (min-width: 1200px)",
+  xxl: "screen and (min-width: 1440px)",
+  xxxl: "screen and (min-width: 1600px)",
+);
+
+$layer: (
+  header: 20,
+  drawer-content: 30,
+  drawer-icon: 50,
+  default: 1,
+  scrollbar: 1,
+  cta-link: 5,
+);

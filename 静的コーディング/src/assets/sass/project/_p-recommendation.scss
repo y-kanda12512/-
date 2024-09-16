@@ -1,0 +1,163 @@
+@use "../global" as global;
+.p-recommendation {
+  background: url(../img/recommend-background.png) no-repeat center center / cover;
+  padding-block: 40px 72px;
+
+  @include global.mq(lg) {
+    padding-block: 64px 108px;
+  }
+
+  &.is-single-page {
+    padding-block: 88px 72px;
+    background: transparent;
+  }
+}
+
+.p-recommendation__inner {
+  padding-left: 20px;
+
+  @include global.mq(lg) {
+    // max-width: calc(1237px + 20px);
+    padding-left: 20px;
+  }
+
+  @include global.mq(xl) {
+    // max-width: calc(1237px + 20px);
+    padding-left: min(calc((203px / 1440px) * 100%), 203px);
+  }
+}
+
+.p-recommendation__swiper-container {
+  position: relative;
+}
+
+.p-recommendation__swiper {
+  margin-top: 95px;
+
+  @include global.mq(lg) {
+    margin-top: 48px;
+  }
+}
+
+.p-recommendation__swiper-wrapper {
+}
+
+.p-recommendation__swiper-slide {
+  .c-articles-card {
+    @include global.mq(lg) {
+    }
+  }
+}
+
+.p-recommendation__swiper-button-prev,
+.p-recommendation__swiper-button-next {
+  width: 48px;
+  height: 48px;
+  top: -51px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include global.mq(lg) {
+    top: -67px;
+  }
+}
+
+.p-recommendation__swiper-button-prev::after,
+.p-recommendation__swiper-button-next::after {
+  display: none;
+}
+
+.p-recommendation__swiper-button-prev {
+  left: initial;
+  right: 84px;
+  background: url(../img/recommendation-arrow-left.png) no-repeat center center/contain;
+
+  @include global.mq(lg) {
+    right: 261px;
+  }
+
+  // ホバーした時のスタイル
+  &:hover {
+    opacity: 1;
+    background: url(../img/pagination-arrow-prev-white.png) no-repeat center center/contain;
+  }
+
+  &.is-single-page {
+    right: 112px;
+    background: url(../img/pagination-arrow-prev-blue.png) no-repeat center center/contain;
+
+    @include global.mq(lg) {
+      right: 259px;
+    }
+
+    // ホバーした時のスタイル
+    &:hover {
+      opacity: 1;
+      background: url(../img/pagination-arrow-prev-blue-2.png) no-repeat center center/contain;
+    }
+  }
+}
+
+.p-recommendation__swiper-button-next {
+  right: 20px;
+  background: url(../img/recommendation-arrow-right.png) no-repeat center center/contain;
+
+  @include global.mq(lg) {
+    right: 197px;
+  }
+
+  // ホバーした時のスタイル
+  &:hover {
+    opacity: 1;
+    background: url(../img/pagination-arrow-next-white.png) no-repeat center center/contain;
+  }
+
+  &.is-single-page {
+    right: 52px;
+    background: url(../img/pagination-arrow-next-blue.png) no-repeat center center/contain;
+
+    @include global.mq(lg) {
+      right: 196px;
+    }
+
+    // ホバーした時のスタイル
+    &:hover {
+      opacity: 1;
+      background: url(../img/pagination-arrow-next-blue-2.png) no-repeat center center/contain;
+    }
+  }
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.p-recommendation__swiper-scrollbar {
+  height: 8px !important;
+  left: 0;
+  bottom: -32px !important;
+  background: global.$color-accent-5;
+  margin-inline: auto;
+  max-width: 350px;
+  z-index: map-get(global.$layer, scrollbar) !important;
+
+  @include global.mq(sm) {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  @include global.mq(lg) {
+    max-width: 1034px;
+    left: 0 !important;
+    transform: translateX(0);
+    bottom: -45px !important;
+  }
+
+  .swiper-scrollbar-drag {
+    background: global.$color-accent-1;
+  }
+}

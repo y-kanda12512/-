@@ -1,0 +1,111 @@
+@use "../global" as global;
+.p-keywords {
+  margin-top: 64px;
+  scroll-margin-top: 80px;
+
+  @include global.mq(lg) {
+    scroll-margin-top: 120px;
+  }
+
+  &.is-single-page {
+    margin-top: 24px;
+    background-color: global.$color-base-1;
+
+    @include global.mq(lg) {
+      margin-top: 35px;
+    }
+  }
+}
+
+.p-keywords__inner {
+  @include global.mq(lg) {
+    max-width: calc(1000px + 20px * 2);
+    margin-inline: auto;
+  }
+}
+
+.p-keywords__head {
+  max-width: 241px;
+  display: flex;
+  align-items: center;
+  padding: 10px 24px 6px 16px;
+  gap: 8px;
+  background-color: global.$color-main-1;
+  border-radius: 16px 16px 0px 0px;
+
+  @include global.mq(lg) {
+    max-width: 309px;
+    padding: 12px 43px 8px 24px;
+    gap: 11px;
+  }
+}
+
+.p-keywords__head-img {
+  width: 18px;
+  height: 18px;
+
+  @include global.mq(lg) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.p-keywords__head-text {
+  font-family: global.$ff-sub;
+  color: global.$color-main-4;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 2.25px;
+
+  @include global.mq(lg) {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 2.7px;
+  }
+}
+
+.p-keywords__content {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 24px 16px;
+  border-radius: 0px 20px 20px 20px;
+  background-color: global.$color-main-4;
+  border: 1px solid global.$color-main-1;
+
+  @include global.mq(lg) {
+    padding: 36px 92px;
+    gap: 16px;
+  }
+}
+
+.p-keywords__tag {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 24px;
+  line-height: 1.8;
+  background-color: global.$color-base-2;
+  text-wrap: nowrap;
+  color: global.$color-main-2;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.8;
+  transition: 0.3s;
+
+  @include global.mq(lg) {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  &:hover {
+    background-color: global.$color-main-2;
+    color: global.$color-base-2;
+  }
+}
+
+.p-keywords__tag-text {
+}

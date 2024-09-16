@@ -1,0 +1,5 @@
+@use "../global" as global;
+body {
+  font-family: global.$ff-base;
+  background-color: global.$color-base-1;
+}

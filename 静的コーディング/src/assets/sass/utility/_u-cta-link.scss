@@ -1,0 +1,10 @@
+@use "../global" as global;
+.u-cta-link-color-transparent {
+  background-color: transparent;
+  color: global.$color-main-4;
+}
+
+.u-cta-link-color-white {
+  background-color: global.$color-main-4;
+  color: global.$color-accent-1;
+}

@@ -1,0 +1,64 @@
+@use "../global" as global;
+
+.header__logo-scroll-before {
+  @include global.mq(lg) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  @include global.mq(xl) {
+    padding-left: 28px;
+  }
+
+  .p-header__logo-link-img {
+    width: 280px;
+
+    @include global.mq(mini) {
+      width: 200px;
+    }
+
+    @include global.mq(lg) {
+      width: 240px;
+    }
+
+    @include global.mq(xl) {
+      width: 280px;
+    }
+  }
+}
+
+.header__logo-scroll-after {
+  .p-header__logo-link {
+    padding: 20px 10px 0px 24px;
+
+    @include global.mq(lg) {
+      padding: 15px 15px 0px 24px;
+    }
+
+    @include global.mq(xl) {
+      padding: 29px 15px 0px 48px;
+    }
+
+    .p-header__logo-link-img {
+      width: 160px;
+
+      @include global.mq(lg) {
+        width: 175px;
+      }
+
+      @include global.mq(xl) {
+        width: 206px;
+      }
+    }
+  }
+}
+
+.u-header__logo-scroll-hidden {
+  display: none;
+  transform: translateY(-100%);
+}
+
+.u-header__logo-scroll-visible {
+  display: block;
+  transform: translateY(0);
+}

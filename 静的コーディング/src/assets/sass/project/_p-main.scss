@@ -1,0 +1,12 @@
+@use "../global" as global;
+.p-main {
+  padding-block: 48px;
+
+  @include global.mq(lg) {
+    padding-block: 64px;
+
+    &.is-top-page {
+      padding-block: 24px 64px;
+    }
+  }
+}

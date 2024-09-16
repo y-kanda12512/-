@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- GoogleFont読み込み -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+	<!-- CSS読み込み -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<title>TOPページ</title>
+</head>
+
+<body>
+	<header id="header" class="p-header">
+		<div class="p-header__inner">
+			<!-- スクロール前のロゴ -->
+			<div id="js-header-logo-scroll-before" class="p-header__logo header__logo-scroll-before">
+				<a href="#" class="p-header__logo-link">
+					<img src="./assets/img/header-logo.png" alt="ビジネスの未来を切り拓く。 DayMaga コンサルティングの専門情報メディア" class="p-header__logo-link-img" />
+				</a>
+			</div>
+
+			<!-- TOPページのみh1タグに切り替えたロゴを出力 -->
+			<!-- <h1 id="js-header-logo-scroll-before" class="p-header__logo header__logo-scroll-before">
+          <a href="#" class="p-header__logo-link">
+            <img src="./assets/img/header-logo.png" alt="ビジネスの未来を切り拓く。 DayMaga コンサルティングの専門情報メディア" class="p-header__logo-link-img" />
+          </a>
+        </h1> -->
+
+			<!-- スクロール後のロゴ -->
+			<!-- デフォルトで非表示クラスをつけておいて、スクロールされたらクラスを除去する -->
+			<div id="js-header-logo-scroll-after" class="p-header__logo header__logo-scroll-after u-header__logo-scroll-hidden">
+				<a href="" class="p-header__logo-link">
+					<img src="./assets/img/logo-3.png" alt="DayMaga" class="p-header__logo-link-img" />
+				</a>
+			</div>
+
+			<!-- TOPページのみh1タグに切り替えたロゴを出力 -->
+			<!-- <h1 id="js-header-logo-scroll-after" class="p-header__logo header__logo-scroll-after u-header__logo-scroll-hidden">
+          <a href="" class="p-header__logo-link">
+            <img src="./assets/img/logo-3.png" alt="DayMaga" class="p-header__logo-link-img" />
+          </a>
+        </h1> -->
+
+			<!-- PC時に表示するナビ -->
+			<nav class="p-header__nav">
+				<div class="p-header__nav-inner">
+					<ul class="p-header__nav-lists">
+						<li class="p-header__nav-list">
+							<a href="" class="p-header__nav-link">新着情報</a>
+						</li>
+						<li class="p-header__nav-list">
+							<a href="" class="p-header__nav-link">TIPS</a>
+						</li>
+						<li class="p-header__nav-list">
+							<a href="" class="p-header__nav-link">インタビュー</a>
+						</li>
+						<li class="p-header__nav-list">
+							<a href="" class="p-header__nav-link">ニュース</a>
+						</li>
+					</ul>
+
+					<div class="p-header__nav-cta">
+						<a class="p-header__nav-cta-link p-cta-link">
+							<!-- <span class="p-cta-link__head u-cta-link-color-transparent">コンサルをお探しの企業様</span>
+                <span class="p-cta-link__body u-cta-link-color-white">まずは無料相談</span> -->
+							<img src="./assets/img/header-cta-1.png" alt="コンサルをお探しの企業様 まずは無料相談" class="p-cta-link__img" />
+						</a>
+						<a class="p-header__nav-cta-link p-cta-link">
+							<!-- <span class="p-cta-link__head u-cta-link-color-white">コンサルタントの方</span>
+                <span class="p-cta-link__body u-cta-link-color-transparent">案件の紹介登録</span> -->
+							<img src="./assets/img/header-cta-2.png" alt="コンサルタントの方 案件の紹介登録" class="p-cta-link__img" />
+						</a>
+					</div>
+
+					<a href="#search" class="p-header__search-btn c-search-btn">
+						<img src="./assets/img/search-icon.png" alt="虫眼鏡" class="p-header__nav-search-btn-img c-search-btn__img" />
+					</a>
+				</div>
+			</nav>
+
+			<!-- スクロール前のドロワー、サーチボタン -->
+			<div id="js-header__btn-area-scroll-before" class="p-header__btn-area u-header__btn-area-column">
+				<div class="p-header__btn-area-inner">
+					<button id="js-drawer-icon-1" class="p-drawer-icon">
+						<img src="./assets/img/menu.png" alt="開くボタン" class="p-drawer-icon__img" />
+						<!-- <div class="p-drawer-icon__bar"></div>
+              <div class="p-drawer-icon__bar"></div>
+              <div class="p-drawer-icon__bar"></div> -->
+					</button>
+					<a href="#search" class="p-header__search-btn c-search-btn">
+						<img src="./assets/img/search-icon.png" alt="虫眼鏡" class="p-header__search-btn-img c-search-btn__img" />
+					</a>
+				</div>
+				<!-- p-header__btn-area-inner -->
+			</div>
+			<!-- p-header__btn-area -->
+
+			<!-- スクロール後のドロワー、サーチボタン -->
+			<!-- デフォルトで非表示クラスをつけておいて、スクロールされたらクラスを除去する -->
+			<div id="js-header__btn-area-scroll-after" class="p-header__btn-area u-header__btn-area-row u-header__btn-area-hidden">
+				<div class="p-header__btn-area-inner">
+					<button id="js-drawer-icon-2" class="p-drawer-icon">
+						<img src="./assets/img/menu.png" alt="開くボタン" class="p-drawer-icon__img" />
+						<!-- <div class="p-drawer-icon__bar"></div>
+              <div class="p-drawer-icon__bar"></div>
+              <div class="p-drawer-icon__bar"></div> -->
+					</button>
+					<a href="#search" class="p-header__search-btn c-search-btn">
+						<img src="./assets/img/search-icon.png" alt="虫眼鏡" class="p-header__search-btn-img c-search-btn__img" />
+					</a>
+				</div>
+				<!-- p-header__btn-area-inner -->
+			</div>
+			<!-- p-header__btn-area -->
+		</div>
+		<!-- p-header__inner -->
+	</header>
+
+	<div id="js-drawer-content" class="p-drawer-content">
+		<div class="p-drawer-content__icon-area">
+			<button id="js-drawer-icon-close" class="p-drawer-content__icon">
+				<img src="./assets/img/menu-close.png" alt="閉じるボタン" class="p-drawer-content__icon-img" />
+			</button>
+		</div>
+		<ul class="p-drawer-content__lists">
+			<li class="p-drawer-content__list">
+				<a href="" class="p-drawer-content__link">新着情報</a>
+			</li>
+			<li class="p-drawer-content__list">
+				<a href="" class="p-drawer-content__link">TIPS</a>
+			</li>
+			<li class="p-drawer-content__list">
+				<a href="" class="p-drawer-content__link">インタビュー</a>
+			</li>
+			<li class="p-drawer-content__list">
+				<a href="" class="p-drawer-content__link">ニュース</a>
+			</li>
+			<li class="p-drawer-content__list">
+				<a href="#search" class="p-drawer-content__link c-search-btn">
+					<img src="./assets/img/search-icon.png" alt="虫眼鏡" class="p-drawer-content__search-btn-img c-search-btn__img" />
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- p-drawer-content -->
+
+	<main id="p-main" class="p-main">
+		<div class="p-single">
+			<div class="p-single__inner">
+				<div class="p-single__head">
+					<div class="p-single__date">
+						<span class="p-single__date-title">公開日　</span>
+						<time datetime="(Y-m-s)" class="p-single__date-number">2024.07.15</time>
+					</div>
+					<!-- p-single__date -->
+
+					<div class="p-single__category u-single__category-tips">TIPS</div>
+
+					<h1 class="p-single__title">フリーコンサルの現場から〜活動の実態と成功のポイント</h1>
+				</div>
+				<!-- p-single__head -->
+
+				<div class="p-single__img">
+					<img src="./assets/img/article-17.png" alt="サムネイル" />
+				</div>
+				<div class="p-single__content">
+					<p>フリーコンサルとしての活動は多岐にわたりますが、成功の鍵はどこにあるのでしょうか。この記事では、フリーコンサルの基本から最新の動向、成功への具体的なステップまでをプロの視点で詳しく紹介します。あなたの活動を次のレベルへと導く情報が満載です。</p>
+
+					<div id="toc_container" class="no_bullets">
+						<p class="toc_title">目次</p>
+						<ul class="toc_list">
+							<li>
+								<a href="#heading1"><span class="toc_number">1.</span>フリーコンサル（フリーコンサルタント）とは</a>
+								<ul>
+									<li>
+										<a href="#heading1_1"><span class="toc_number">1-1.</span>フリーコンサルの定義と特徴</a>
+									</li>
+									<li>
+										<a href="#heading1_2"><span class="toc_number">1-2.</span>フリーコンサルと従来のコンサルタントの違い</a>
+									</li>
+									<li>
+										<a href="#heading1_3"><span class="toc_number">1-3.</span>フリーコンサルタントの需要</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#heading2"><span class="toc_number">2.</span>フリーコンサルの活動方法と戦略</a>
+								<ul>
+									<li>
+										<a href="#heading2_1"><span class="toc_number">2-1.</span>フリーコンサルとしての活動のステップ</a>
+									</li>
+									<li>
+										<a href="#heading2_2"><span class="toc_number">2-2.</span>成功するための戦略</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#heading3"><span class="toc_number">3.</span>フリーコンサルの案件とマッチング</a>
+								<ul>
+									<li>
+										<a href="#heading3_1"><span class="toc_number">3-1.</span>案件の探し方</a>
+									</li>
+									<li>
+										<a href="#headin3_2"><span class="toc_number">3-2.</span>マッチングサービスの利用方法と紹介</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#heading4"><span class="toc_number">4.</span>フリーコンサル関連の企業とサービス</a>
+								<ul>
+									<li>
+										<a href="#heading4_1"><span class="toc_number">4-1.</span>代表的なフリーコンサル関連企業の紹介</a>
+									</li>
+									<li>
+										<a href="#headin4_2"><span class="toc_number">4-2.</span>人気のフリーコンサルサービスの紹介</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#heading5"><span class="toc_number">5.</span>フリーコンサルの活用事例と動向</a>
+								<ul>
+									<li>
+										<a href="#heading5_1"><span class="toc_number">5-1.</span>成功事例の紹介</a>
+									</li>
+									<li>
+										<a href="#headin5_2"><span class="toc_number">5-2.</span>日本におけるフリーコンサルの最新動向</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#heading6"><span class="toc_number">6.</span>フリーコンサルの相場・単価は？</a>
+							</li>
+						</ul>
+					</div>
+					<!-- toc_white no_bullets -->
+
+					<h2>1.フリーコンサル（フリーコンサルタント）とは</h2>
+					<p>フリーコンサル、またはフリーコンサルタントとは、独立して業務を行うコンサルタントのことを指します。企業や個人が抱える課題や問題を解決するためのアドバイスやサポートを提供する専門家であり、特定の会社に所属せず、自らのスキルや経験を活かして多様なクライアントと契約を結ぶことが特徴です。</p>
+					<h3>1-1. フリーコンサルの定義と特徴</h3>
+					<p>フリーコンサルは、一般的なコンサルタントと同じく、クライアントのビジネスやプロジェクトに関する課題を解決するための専門的な知識やスキルを持っています。しかし、フリーコンサルの最大の特徴は、独立して活動することです。これにより、多様な業界や分野のクライアントとの関わりを持つことができ、幅広い経験や知識を蓄積することが可能となります。また、自らのビジネスモデルや価格設定を自由に決めることができるため、柔軟な働き方を選択することができます。</p>
+					<blockquote>
+						<p>"フリーコンサルタントは、ビジネスの最前線で活躍する独立したプロフェッショナルです。"</p>
+						<a href=""> - 日本フリーコンサルタント協会</a>
+					</blockquote>
+					<h3>1-2. フリーコンサルと従来のコンサルタントの違い</h3>
+					<p>
+						フリーコンサルと従来のコンサルタント、これら二つの職種は似ているようでいて、実は多くの違いがあります。まず、フリーコンサルは独立して活動するプロフェッショナルであり、自らのスキルや経験を活かして、多様なクライアントと直接契約を結びます。これに対して、従来のコンサルタントは大手コンサルティングファームや企業に所属し、その組織の方針やルールに従って業務を行います。<br />また、フリーコンサルは自らのビジネスモデルや価格設定を自由に決めることができるため、柔軟に対応することが可能です。一方、従来のコンサルタントは組織の方針に従った価格設定や業務範囲が定められていることが多いです。<br />
+						フリーコンサルの大きな魅力は、その自由度の高さにあります。自分の得意分野や興味を追求し、直接クライアントとの関係を築くことができるのです。しかし、その分リスクも高く、安定した収入を得るための戦略やネットワーク構築が求められます。従来のコンサルタントは組織のバックアップを受けられる反面、自由度に制約があるとも言えます。<br />どちらの職種にも一長一短がありますが、自分のキャリアやライフスタイルに合わせて選択することが大切です。
+					</p>
+					<table>
+						<thead>
+							<tr>
+								<th>項目</th>
+								<th>フリーコンサル</th>
+								<th>従来のコンサルタント</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>雇用形態</td>
+								<td>独立・自営業</td>
+								<td>企業に所属</td>
+							</tr>
+							<tr>
+								<td>収入の安定性</td>
+								<td>不安定</td>
+								<td>比較的安定</td>
+							</tr>
+							<tr>
+								<td>案件獲得</td>
+								<td>個人のネットワークやマッチングサービス</td>
+								<td>企業が提供</td>
+							</tr>
+							<tr>
+								<td>スキルアップ</td>
+								<td>個人の責任で</td>
+								<td>企業の研修などで</td>
+							</tr>
+							<tr>
+								<td>働き方</td>
+								<td>柔軟</td>
+								<td>企業のブランドを代表する</td>
+							</tr>
+							<tr>
+								<td>ブランディング</td>
+								<td>個人のブランド築く</td>
+								<td>企業の方針に従う</td>
+							</tr>
+							<tr>
+								<td>リスク</td>
+								<td>個人が全て責任</td>
+								<td>企業が一部を負担</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3>1-3. フリーコンサルタントの需要</h3>
+					<p>近年、ビジネス環境の急速な変化に伴い、フリーコンサルタントの需要が高まっています。企業は柔軟かつ専門的なアドバイスを求めており、フリーコンサルタントはその要望に応えることができます。</p>
+					<h4>1-3-1. 需要の高い分野</h4>
+					<ul>
+						<li>デジタルトランスフォーメーション</li>
+						<li>事業戦略</li>
+						<li>マーケティング戦略</li>
+						<li>人事・組織改革</li>
+					</ul>
+
+					<h2>2.フリーコンサルの活動方法と戦略</h2>
+					<p>フリーコンサルとしての成功は、適切な活動方法と戦略の選択にかかっています。独立したプロフェッショナルとしての立場を保ちつつ、クライアントとの信頼関係を築くためのステップや、競合他者との差別化を図る戦略が求められます。</p>
+					<h3>2-1. フリーコンサルとしての活動のステップ</h3>
+					<p>まず、自身の専門分野や得意とする領域を明確に定義します。次に、そのスキルや知識を活かせるクライアントをターゲットとして絞り込み、マーケティング活動やネットワーキングを通じてアプローチを行います。案件獲得後は、クライアントの課題解決を目指してコンサルティングを提供。プロジェクト終了後も、アフターフォローや定期的なフィードバックを通じて、長期的な関係性を築くことが大切です。</p>
+					<h3>2-2. 成功するための戦略</h3>
+					<p>成功の鍵は、自身の強みや特色を明確にアピールすること。競合他者との差別化を図るために、独自の価値提案やサービス内容を工夫することが必要です。また、定期的なスキルアップや市場の動向に敏感になることで、変化するクライアントのニーズに迅速に対応することができます。さらに、信頼関係を築くためのコミュニケーション能力や、結果を出すための実行力も欠かせません。</p>
+
+					<h2>3.フリーコンサルの案件とマッチング</h2>
+					<p>フリーコンサルとしての活動を始める際、最も重要なのは適切な案件を見つけることです。案件の探し方や、マッチングサービスの利用方法について、ここでは詳しく解説します。</p>
+					<h3>3-1. 案件の探し方</h3>
+					<p>案件を探す際の基本は、自身の専門分野や得意とする領域に合わせた案件を選ぶこと。初めは、知人や既存のネットワークを活用して案件を探すのが効果的です。また、SNSやブログを活用して自身のスキルや経験をアピールすることで、新しいクライアントからのオファーを受けることも可能です。さらに、専門のセミナーや勉強会に参加することで、同業者や潜在的なクライアントとのネットワークを広げることができます。</p>
+					<h3>3-2. マッチングサービスの利用方法と紹介</h3>
+					<p>近年、フリーコンサルとクライアントを繋ぐマッチングサービスが増えてきました。これらのサービスを利用することで、自身のスキルや経験に合った案件を効率的に探すことができます。利用方法は、サービスに登録し、プロフィールや実績を充実させること。これにより、クライアントからのオファーが増える可能性が高まります。また、自らもアクティブに案件を検索し、応募することで、より多くのチャンスを掴むことができます。testtesttest</p>
+
+					<h2>4.フリーコンサル関連の企業とサービス</h2>
+					<p>フリーコンサルの活動をサポートする企業やサービスは、近年増加の一途をたどっています。これらの企業やサービスを利用することで、フリーコンサルとしての活動をより効果的に、そして効率的に進めることができます。</p>
+					<h3>4-1. 代表的なフリーコンサル関連企業の紹介</h3>
+					<p>フリーコンサルをサポートする企業は多数存在しますが、その中でも特に注目されるのは、マッチングサービスを提供する企業や、コンサルタントのスキルアップをサポートする研修・セミナーを提供する企業です。これらの企業は、フリーコンサルのニーズに応じて、様々なサービスを展開しており、活動の幅を広げるための強力なパートナーとなるでしょう。</p>
+					<h3>4-2. 人気のフリーコンサルサービスの紹介</h3>
+					<p>
+						当サイト「プロコン（仮）」はコンサルタントのマッチングプラットフォームです。企業の課題に応じたプロジェクトのご提案からコンサルタントのアサイン、プロジェクト推進フォローまで幅広く支援しています。<br />
+						当サイトに限らず、近年、多くのフリーコンサルマッチングサービスが登場しています。これらのサービスは、フリーコンサルとクライアントを効率的に繋ぐプラットフォームとして、非常に高い評価を受けています。登録から案件の検索、契約までの一連の流れをサポートしてくれるため、フリーコンサルとしての活動がスムーズに進められます。また、レビューや評価機能が充実しているサービスも多く、信頼性の確認や自身のブランディングにも役立ちます。
+					</p>
+
+					<h2>5.フリーコンサルの活用事例と動向</h2>
+					<p>フリーコンサルとしての活動は、多くの成功事例を生み出しています。また、日本におけるフリーコンサルの動向も日々変化しており、その最新の情報を把握することは、フリーコンサルとしての活動をより効果的に進めるために重要です。</p>
+					<h3>5-1. 成功事例の紹介</h3>
+					<p>フリーコンサルとしての成功事例は多岐にわたります。例えば、特定の業界における専門知識を活かして、新規事業の立ち上げや既存事業の改善をサポートしたケース、また、マッチングサービスを活用して短期間で多数の案件を獲得し、高い評価を受けたケースなどがあります。これらの事例は、フリーコンサルとしての活動の幅や可能性を示しており、多くのコンサルタントにとって参考となるでしょう。</p>
+					<h3>5-2. 日本におけるフリーコンサルの最新動向</h3>
+					<p>日本におけるフリーコンサルの動向として、近年、特定の業界や分野に特化したフリーコンサルが増加しています。また、オンラインを活用したコンサルティングサービスの需要も高まっており、リモートワークの普及に伴い、地域にとらわれずに活動するフリーコンサルも増えてきました。さらに、フリーコンサルをサポートするための研修やセミナー、ツールの提供も充実してきており、フリーコンサルとしての活動環境が整備されつつあることが伺えます。</p>
+					<h2>6.フリーコンサルの相場・単価は？</h2>
+					<p>
+						フリーコンサルタントとしての活動を始める際、多くの方が気になるのが「相場」です。<br />
+						フリーコンサルの報酬は、専門性や経験、提供するサービスの内容などによって大きく変動します。一般的に、ビジネス戦略や経営コンサルティングのような高度な専門性を要する分野では、高い報酬が設定されることが多いです。<br />
+						一方、初心者や一般的な業務をサポートするタイプのコンサルタントは、相場がやや低めになることが考えられます。<br />
+						また、フリーコンサルの報酬形態も様々です。固定報酬型、時間単位の報酬型、成果報酬型など、クライアントや案件に応じて選択することができます。特に、成果報酬型は成果を上げることができれば高い報酬を得ることができる一方、リスクも伴います。<br />
+						フリーコンサルとしてのキャリアを積む中で、自身の価値を正しく理解し、適切な報酬を設定することが大切です。市場の動向を常にチェックし、自身のスキルや経験をアップデートすることで、より良い条件での仕事を獲得することが可能となります。<br /><br />
+						という前提を踏まえたうえでおおよその目安としては、独立してフリーコンサルタントとして活動する際、月収の一般的な相場は少し幅がありますが、80～250万円とされています。特に、多くの方が80～160万円の月収を実現しており、これを年収に換算すると約960～1,920万円となります。ただし、これは年間を通してフル稼働した場合の数字です。<br />
+						実際には、家族や趣味の時間を大切にしたり、家庭の状況を優先するために稼働時間を調整している方も少なくありません。その結果、平均的な年収はおおよそ1,200〜1,500万円程度となることが多いです。しかし、仕事内容や稼働時間を調整（増やす）したりすることで、1,500万円を超える年収を目指すことも十分可能です。<br />
+						このように、もちろん無条件に、とはいきませんが、仕事・家庭・趣味などのバランスを自分で調整することが可能であり、なおかつ高収入を狙える点はフリーコンサルの大きな魅力です。
+					</p>
+					<a href="" class="wp-block-button__link">コンサルタント案件の紹介登録をする</a>
+				</div>
+				<!-- p-single__content -->
+
+				<div class="p-single__tag-content">
+					<p class="p-single__tag-content-title">この記事のタグ</p>
+					<div class="p-single__tag-list">
+						<a href="" class="p-single__tag">
+							#
+							<span class="p-single__tag-text">コンサルファーム</span>
+						</a>
+						<a href="" class="p-single__tag">
+							#
+							<span class="p-single__tag-text">共通</span>
+						</a>
+						<a href="" class="p-single__tag">
+							#
+							<span class="p-single__tag-text">その他</span>
+						</a>
+						<a href="" class="p-single__tag">
+							#
+							<span class="p-single__tag-text">Pickup</span>
+						</a>
+					</div>
+					<!-- p-single__tag-list -->
+				</div>
+				<!-- p-single__tag-content -->
+			</div>
+			<!-- p-single__inner -->
+		</div>
+		<!-- p-single -->
+
+		<section class="p-recommendation is-single-page">
+			<div class="p-recommendation__inner">
+				<h2 class="c-section-title c-section-title--p-recommendation">
+					<img src="./assets/img/logo-1.png" alt="会社ロゴ1" class="c-section-title__img is-single-page" />
+					<span class="c-section-title__text is-single-page">おすすめ記事</span>
+				</h2>
+
+				<div class="p-recommendation__swiper-container">
+					<!-- Slider main container -->
+					<div class="swiper p-recommendation__swiper">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper p-recommendation__swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide p-recommendation__swiper-slide">
+								<a class="c-articles-card">
+									<div class="c-articles-card__head">
+										<div class="c-articles-card__img">
+											<img src="./assets/img/article-12.png" alt="新着記事-1" />
+										</div>
+									</div>
+									<div class="c-articles-card__body">
+										<time datetime="" class="c-articles-card__date">2024.07.31</time>
+										<div class="c-articles-card__title">金融業界のデジタル化：コンサルファームが解説する課題と解決策</div>
+										<div class="c-articles-card__category u-articles-card__category-news">ニュース</div>
+										<div class="c-articles-card__tags">
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">コンサルファーム</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">IT</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">金融・保険</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">その他</span>
+											</div>
+											<!-- c-articles-card__tag -->
+										</div>
+										<!-- c-articles-card__tags -->
+									</div>
+									<!-- c-articles-card__body -->
+								</a>
+								<!-- c-articles-card -->
+							</div>
+							<!-- swiper-slide p-recommendation__swiper-slide -->
+
+							<div class="swiper-slide p-recommendation__swiper-slide">
+								<a class="c-articles-card">
+									<div class="c-articles-card__head">
+										<div class="c-articles-card__img">
+											<img src="./assets/img/article-10.png" alt="新着記事-2" />
+										</div>
+									</div>
+									<div class="c-articles-card__body">
+										<time datetime="" class="c-articles-card__date">2024.07.28</time>
+										<div class="c-articles-card__title">人材育成の新潮流：コンサルティングがもたらす効果的なトレーニング手法</div>
+										<div class="c-articles-card__category u-articles-card__category-tips">TIPS</div>
+										<div class="c-articles-card__tags">
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">コンサルファーム</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">共通</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">HR</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">Pickup</span>
+											</div>
+											<!-- c-articles-card__tag -->
+										</div>
+										<!-- c-articles-card__tags -->
+									</div>
+									<!-- c-articles-card__body -->
+								</a>
+								<!-- c-articles-card -->
+							</div>
+							<!-- swiper-slide p-recommendation__swiper-slide -->
+
+							<div class="swiper-slide p-recommendation__swiper-slide">
+								<a class="c-articles-card">
+									<div class="c-articles-card__head">
+										<div class="c-articles-card__img">
+											<img src="./assets/img/article-9.png" alt="新着記事-3" />
+										</div>
+									</div>
+									<div class="c-articles-card__body">
+										<time datetime="" class="c-articles-card__date">2024.07.25</time>
+										<div class="c-articles-card__title">Big Fourが新たなデジタルイノベーションラボを設立、業界に変革をもたらす</div>
+										<div class="c-articles-card__category u-articles-card__category-new">ニュース</div>
+										<div class="c-articles-card__tags">
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">コンサルファーム</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">共通</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">IT</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">Pickup</span>
+											</div>
+											<!-- c-articles-card__tag -->
+										</div>
+										<!-- c-articles-card__tags -->
+									</div>
+									<!-- c-articles-card__body -->
+								</a>
+								<!-- c-articles-card -->
+							</div>
+							<!-- swiper-slide p-recommendation__swiper-slide -->
+
+							<div class="swiper-slide p-recommendation__swiper-slide">
+								<a class="c-articles-card">
+									<div class="c-articles-card__head">
+										<div class="c-articles-card__img">
+											<img src="./assets/img/article-4.png" alt="新着記事-4" />
+										</div>
+									</div>
+									<div class="c-articles-card__body">
+										<time datetime="" class="c-articles-card__date">2024.07.17</time>
+										<div class="c-articles-card__title">リーダーシップの発展に向けたコンサルティングの重要性</div>
+										<div class="c-articles-card__category u-articles-card__category-new">新着情報</div>
+										<div class="c-articles-card__tags">
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">コンサルファーム</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">M&A・事業再生</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">その他</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">Pickup</span>
+											</div>
+											<!-- c-articles-card__tag -->
+										</div>
+										<!-- c-articles-card__tags -->
+									</div>
+									<!-- c-articles-card__body -->
+								</a>
+								<!-- c-articles-card -->
+							</div>
+							<!-- swiper-slide p-recommendation__swiper-slide -->
+
+							<div class="swiper-slide p-recommendation__swiper-slide">
+								<a class="c-articles-card">
+									<div class="c-articles-card__head">
+										<div class="c-articles-card__img">
+											<img src="./assets/img/article-17.png" alt="新着記事-5" />
+										</div>
+									</div>
+									<div class="c-articles-card__body">
+										<time datetime="" class="c-articles-card__date">2024.07.15</time>
+										<div class="c-articles-card__title">フリーコンサルの現場から〜活動の実態と成功のポイント</div>
+										<div class="c-articles-card__category u-articles-card__category-tips">TIPS</div>
+										<div class="c-articles-card__tags">
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">コンサルファーム</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">共通</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">その他</span>
+											</div>
+											<!-- c-articles-card__tag -->
+											<div class="c-articles-card__tag">
+												#
+												<span class="c-articles-card__tag-text">Pickup</span>
+											</div>
+											<!-- c-articles-card__tag -->
+										</div>
+										<!-- c-articles-card__tags -->
+									</div>
+									<!-- c-articles-card__body -->
+								</a>
+								<!-- c-articles-card -->
+							</div>
+							<!-- swiper-slide p-recommendation__swiper-slide -->
+						</div>
+						<!-- swiper-wrapper p-recommendation__swiper-wrapper -->
+
+						<!-- If we need pagination -->
+						<div class="swiper-pagination p-recommendation__swiper-pagination"></div>
+					</div>
+					<!-- swiper p-recommendation__swiper -->
+
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev p-recommendation__swiper-button-prev"></div>
+					<div class="swiper-button-next p-recommendation__swiper-button-next"></div>
+
+					<!-- If we need scrollbar -->
+					<div class="swiper-scrollbar p-recommendation__swiper-scrollbar"></div>
+				</div>
+				<!-- p-recommendation__swiper-container -->
+			</div>
+			<!-- p-recommendation__inner -->
+		</section>
+		<!-- p-recommendation -->
+
+		<div class="p-keywords is-single-page">
+			<div class="p-keywords__inner l-inner">
+				<div class="p-keywords__head">
+					<img src="./assets/img/search-icon.png" alt="虫眼鏡" class="p-keywords__head-img" />
+					<span class="p-keywords__head-text">キーワードで絞り込む</span>
+				</div>
+				<div class="p-keywords__content">
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">コンサルファーム</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">クライアント</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">共通</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">戦略</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">IT</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">業務改善</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">HR</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">M&A・事業再生</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">金融・保健</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">メーカー</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">商社</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">不動産・建設・設備</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">サービス</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">物流</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">流通</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">その他</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">広告・マスコミ</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">Pickup</span>
+					</a>
+					<!-- p-keywords__tag -->
+				</div>
+				<!-- p-keywords__content -->
+			</div>
+			<!-- l-inner -->
+		</div>
+		<!-- p-keywords -->
+	</main>
+
+	<div class="p-cta">
+		<div class="p-cta__inner">
+			<div class="p-cta__links">
+				<a href="" class="p-cta__link p-cta-link">
+					<span class="p-cta-link__head">コンサルタントをお探しの企業様へ</span>
+					<span class="p-cta-link__body">プロジェクトの相談をする</span>
+				</a>
+				<a href="" class="p-cta__link p-cta-link">
+					<span class="p-cta-link__head">コンサルタントの方へ</span>
+					<span class="p-cta-link__body">案件の紹介を受ける</span>
+				</a>
+			</div>
+			<!-- p-cta__links -->
+		</div>
+		<!-- p-cta__inner -->
+	</div>
+	<!-- p-cta -->
+
+	<div class="p-footer">
+		<div class="l-inner">
+			<div class="p-footer__content">
+				<div class="p-footer__logo">
+					<a href="" class="p-footer__logo-link">
+						<img src="./assets/img/logo-4.png" alt="ロゴ4" class="p-footer__logo-img" />
+					</a>
+				</div>
+				<div class="p-footer__links">
+					<a href="" class="p-footer__link">新着情報</a>
+					<a href="" class="p-footer__link">DayMagaについて</a>
+					<a href="" class="p-footer__link">TIPS</a>
+					<a href="" class="p-footer__link">運営会社</a>
+					<a href="" class="p-footer__link">インタビュー</a>
+					<a href="" class="p-footer__link">サイト利用規約</a>
+					<a href="" class="p-footer__link">ニュース</a>
+				</div>
+				<!-- p-footer__links -->
+			</div>
+			<!-- p-footer__content -->
+			<p class="p-footer__copyright">&copy;2024 Daytra Consul</p>
+			<p class="p-footer__note">このサイトはCrown Cat株式会社様のご協力のもと作成したコーディング用の練習課題です。実在の人物・団体とは関係ありません。</p>
+		</div>
+		<!-- p-footer__inner -->
+	</div>
+	<!-- p-footer -->
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script src="./assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+@use "../global" as global;
+.u-all-article__change-tab-all {
+  color: global.$color-main-1;
+  border-color: global.$color-main-1;
+
+  &.is-checked {
+    background-color: global.$color-main-1;
+    color: global.$color-main-4;
+  }
+}
+
+.u-all-article__change-tab-new {
+  color: global.$color-accent-1;
+  border-color: global.$color-accent-1;
+
+  &.is-checked {
+    background-color: global.$color-accent-1;
+    color: global.$color-main-4;
+  }
+}
+
+.u-all-article__change-tab-tips {
+  color: global.$color-accent-2;
+  border-color: global.$color-accent-2;
+
+  &.is-checked {
+    background-color: global.$color-accent-2;
+    color: global.$color-main-4;
+  }
+}
+
+.u-all-article__change-tab-interview {
+  color: global.$color-accent-4;
+  border-color: global.$color-accent-4;
+
+  &.is-checked {
+    background-color: global.$color-accent-4;
+    color: global.$color-main-4;
+  }
+}
+
+.u-all-article__change-tab-news {
+  color: global.$color-accent-3;
+  border-color: global.$color-accent-3;
+
+  &.is-checked {
+    background-color: global.$color-accent-3;
+    color: global.$color-main-4;
+  }
+}

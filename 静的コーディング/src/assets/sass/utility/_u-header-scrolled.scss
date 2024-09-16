@@ -1,0 +1,5 @@
+@use "../global" as global;
+
+.u-header-scrolled {
+  background-color: global.$color-base-1;
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- GoogleFont読み込み -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+	<!-- CSS読み込み -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<title>TOPページ</title>
+</head>
+
+<body>
+	<header id="header" class="p-header">
+		<div class="p-header__inner">
+			<!-- スクロール前のロゴ -->
+			<div id="js-header-logo-scroll-before" class="p-header__logo header__logo-scroll-before">
+				<a href="#" class="p-header__logo-link">
+					<img src="./assets/img/header-logo.png" alt="ビジネスの未来を切り拓く。 DayMaga コンサルティングの専門情報メディア" class="p-header__logo-link-img" />
+				</a>
+			</div>
+
+			<!-- TOPページのみh1タグに切り替えたロゴを出力 -->
+			<!-- <h1 id="js-header-logo-scroll-before" class="p-header__logo header__logo-scroll-before">
+          <a href="#" class="p-header__logo-link">
+            <img src="./assets/img/header-logo.png" alt="ビジネスの未来を切り拓く。 DayMaga コンサルティングの専門情報メディア" class="p-header__logo-link-img" />
+          </a>
+        </h1> -->
+
+			<!-- スクロール後のロゴ -->
+			<!-- デフォルトで非表示クラスをつけておいて、スクロールされたらクラスを除去する -->
+			<div id="js-header-logo-scroll-after" class="p-header__logo header__logo-scroll-after u-header__logo-scroll-hidden">
+				<a href="" class="p-header__logo-link">
+					<img src="./assets/img/logo-3.png" alt="DayMaga" class="p-header__logo-link-img" />
+				</a>
+			</div>
+
+			<!-- TOPページのみh1タグに切り替えたロゴを出力 -->
+			<!-- <h1 id="js-header-logo-scroll-after" class="p-header__logo header__logo-scroll-after u-header__logo-scroll-hidden">
+          <a href="" class="p-header__logo-link">
+            <img src="./assets/img/logo-3.png" alt="DayMaga" class="p-header__logo-link-img" />
+          </a>
+        </h1> -->
+
+			<!-- PC時に表示するナビ -->
+			<nav class="p-header__nav">
+				<div class="p-header__nav-inner">
+					<ul class="p-header__nav-lists">
+						<li class="p-header__nav-list">
+							<a href="" class="p-header__nav-link">新着情報</a>
+						</li>
+						<li class="p-header__nav-list">
+							<a href="" class="p-header__nav-link">TIPS</a>
+						</li>
+						<li class="p-header__nav-list">
+							<a href="" class="p-header__nav-link">インタビュー</a>
+						</li>
+						<li class="p-header__nav-list">
+							<a href="" class="p-header__nav-link">ニュース</a>
+						</li>
+					</ul>
+
+					<div class="p-header__nav-cta">
+						<a class="p-header__nav-cta-link p-cta-link">
+							<!-- <span class="p-cta-link__head u-cta-link-color-transparent">コンサルをお探しの企業様</span>
+                <span class="p-cta-link__body u-cta-link-color-white">まずは無料相談</span> -->
+							<img src="./assets/img/header-cta-1.png" alt="コンサルをお探しの企業様 まずは無料相談" class="p-cta-link__img" />
+						</a>
+						<a class="p-header__nav-cta-link p-cta-link">
+							<!-- <span class="p-cta-link__head u-cta-link-color-white">コンサルタントの方</span>
+                <span class="p-cta-link__body u-cta-link-color-transparent">案件の紹介登録</span> -->
+							<img src="./assets/img/header-cta-2.png" alt="コンサルタントの方 案件の紹介登録" class="p-cta-link__img" />
+						</a>
+					</div>
+
+					<a class="p-header__search-btn c-search-btn">
+						<img src="./assets/img/search-icon.png" alt="虫眼鏡" class="p-header__nav-search-btn-img c-search-btn__img" />
+					</a>
+				</div>
+			</nav>
+
+			<!-- スクロール前のドロワー、サーチボタン -->
+			<div id="js-header__btn-area-scroll-before" class="p-header__btn-area u-header__btn-area-column">
+				<div class="p-header__btn-area-inner">
+					<button id="js-drawer-icon-1" class="p-drawer-icon">
+						<img src="./assets/img/menu.png" alt="開くボタン" class="p-drawer-icon__img" />
+						<!-- <div class="p-drawer-icon__bar"></div>
+              <div class="p-drawer-icon__bar"></div>
+              <div class="p-drawer-icon__bar"></div> -->
+					</button>
+					<a class="p-header__search-btn c-search-btn">
+						<img src="./assets/img/search-icon.png" alt="虫眼鏡" class="p-header__search-btn-img c-search-btn__img" />
+					</a>
+				</div>
+				<!-- p-header__btn-area-inner -->
+			</div>
+			<!-- p-header__btn-area -->
+
+			<!-- スクロール後のドロワー、サーチボタン -->
+			<!-- デフォルトで非表示クラスをつけておいて、スクロールされたらクラスを除去する -->
+			<div id="js-header__btn-area-scroll-after" class="p-header__btn-area u-header__btn-area-row u-header__btn-area-hidden">
+				<div class="p-header__btn-area-inner">
+					<button id="js-drawer-icon-2" class="p-drawer-icon">
+						<img src="./assets/img/menu.png" alt="開くボタン" class="p-drawer-icon__img" />
+						<!-- <div class="p-drawer-icon__bar"></div>
+              <div class="p-drawer-icon__bar"></div>
+              <div class="p-drawer-icon__bar"></div> -->
+					</button>
+					<a class="p-header__search-btn c-search-btn">
+						<img src="./assets/img/search-icon.png" alt="虫眼鏡" class="p-header__search-btn-img c-search-btn__img" />
+					</a>
+				</div>
+				<!-- p-header__btn-area-inner -->
+			</div>
+			<!-- p-header__btn-area -->
+		</div>
+		<!-- p-header__inner -->
+	</header>
+
+	<div id="js-drawer-content" class="p-drawer-content">
+		<div class="p-drawer-content__icon-area">
+			<button id="js-drawer-icon-close" class="p-drawer-content__icon">
+				<img src="./assets/img/menu-close.png" alt="閉じるボタン" class="p-drawer-content__icon-img" />
+			</button>
+		</div>
+		<ul class="p-drawer-content__lists">
+			<li class="p-drawer-content__list">
+				<a href="" class="p-drawer-content__link">新着情報</a>
+			</li>
+			<li class="p-drawer-content__list">
+				<a href="" class="p-drawer-content__link">TIPS</a>
+			</li>
+			<li class="p-drawer-content__list">
+				<a href="" class="p-drawer-content__link">インタビュー</a>
+			</li>
+			<li class="p-drawer-content__list">
+				<a href="" class="p-drawer-content__link">ニュース</a>
+			</li>
+			<li class="p-drawer-content__list">
+				<a class="p-drawer-content__link c-search-btn">
+					<img src="./assets/img/search-icon.png" alt="虫眼鏡" class="p-drawer-content__search-btn-img c-search-btn__img" />
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- p-drawer-content -->
+
+	<main id="p-main" class="p-main">
+		<div class="p-404">
+			<div class="p-404__inner">
+				<div class="p-404__content">
+					<img src="./assets/img/logo-1.png" alt="ロゴ1" class="p-404__img" />
+					<div class="p-404__title">
+						<p class="p-404__title-text">this page not found</p>
+						<p class="p-404__title-number">404</p>
+					</div>
+					<p class="p-404__main-text-1">申し訳ございません。お探しのページが存在しません。</p>
+					<p class="p-404__main-text-2">トップページに戻ってコンテンツお探しください。</p>
+					<a href="" class="p-404__link">TOPページに戻る</a>
+				</div>
+				<!-- p-404__content -->
+			</div>
+			<!-- p-404__inner -->
+		</div>
+		<!-- p-404 -->
+
+		<div class="p-keywords">
+			<div class="p-keywords__inner l-inner">
+				<div class="p-keywords__head">
+					<img src="./assets/img/search-icon.png" alt="虫眼鏡" class="p-keywords__head-img" />
+					<span class="p-keywords__head-text">キーワードで絞り込む</span>
+				</div>
+				<div class="p-keywords__content">
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">コンサルファーム</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">クライアント</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">共通</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">戦略</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">IT</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">業務改善</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">HR</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">M&A・事業再生</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">金融・保健</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">メーカー</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">商社</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">不動産・建設・設備</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">サービス</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">物流</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">流通</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">その他</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">広告・マスコミ</span>
+					</a>
+					<a href="" class="p-keywords__tag">
+						#
+						<span class="p-keywords__tag-text">Pickup</span>
+					</a>
+					<!-- p-keywords__tag -->
+				</div>
+				<!-- p-keywords__content -->
+			</div>
+			<!-- l-inner -->
+		</div>
+		<!-- p-keywords -->
+	</main>
+
+	<div class="p-cta">
+		<div class="p-cta__inner">
+			<div class="p-cta__links">
+				<a href="" class="p-cta__link p-cta-link">
+					<span class="p-cta-link__head">コンサルタントをお探しの企業様へ</span>
+					<span class="p-cta-link__body">プロジェクトの相談をする</span>
+				</a>
+				<a href="" class="p-cta__link p-cta-link">
+					<span class="p-cta-link__head">コンサルタントの方へ</span>
+					<span class="p-cta-link__body">案件の紹介を受ける</span>
+				</a>
+			</div>
+			<!-- p-cta__links -->
+		</div>
+		<!-- p-cta__inner -->
+	</div>
+	<!-- p-cta -->
+
+	<div class="p-footer">
+		<div class="l-inner">
+			<div class="p-footer__content">
+				<div class="p-footer__logo">
+					<a href="" class="p-footer__logo-link">
+						<img src="./assets/img/logo-4.png" alt="ロゴ4" class="p-footer__logo-img" />
+					</a>
+				</div>
+				<div class="p-footer__links">
+					<a href="" class="p-footer__link">新着情報</a>
+					<a href="" class="p-footer__link">DayMagaについて</a>
+					<a href="" class="p-footer__link">TIPS</a>
+					<a href="" class="p-footer__link">運営会社</a>
+					<a href="" class="p-footer__link">インタビュー</a>
+					<a href="" class="p-footer__link">サイト利用規約</a>
+					<a href="" class="p-footer__link">ニュース</a>
+				</div>
+				<!-- p-footer__links -->
+			</div>
+			<!-- p-footer__content -->
+			<p class="p-footer__copyright">&copy;2024 Daytra Consul</p>
+			<p class="p-footer__note">このサイトはCrown Cat株式会社様のご協力のもと作成したコーディング用の練習課題です。実在の人物・団体とは関係ありません。</p>
+		</div>
+		<!-- p-footer__inner -->
+	</div>
+	<!-- p-footer -->
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script src="./assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+@use "../global" as global;
+
+.u-single__category-new {
+  color: global.$color-accent-1;
+}
+
+.u-single__category-tips {
+  color: global.$color-accent-2;
+}
+
+.u-single__category-news {
+  color: global.$color-accent-3;
+}
+
+.u-single__category-interview {
+  color: global.$color-accent-4;
+}

@@ -1,0 +1,67 @@
+@use "../global" as global;
+.c-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &.c-section-title--p-new-articles {
+    @include global.mq(lg) {
+      margin-inline: auto;
+      justify-content: center;
+    }
+  }
+}
+
+.c-section-title__img {
+  width: 42px;
+  height: 22.615px;
+
+  @include global.mq(lg) {
+    width: 72px;
+    height: 38px;
+  }
+
+  &.is-single-page {
+    @include global.mq(lg) {
+      width: 52px;
+      height: 28px;
+    }
+  }
+
+  // 他のページではtext-align:center;で中央揃えにしているため、ここではmargin-bottomを適用させて対応する
+  &.c-section-title__img-tag-page {
+    margin-bottom: 22px;
+
+    @include global.mq(lg) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.c-section-title__text {
+  font-family: global.$ff-sub;
+  text-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 4.8px;
+  color: global.$color-accent-1;
+
+  @include global.mq(lg) {
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: 6.4px;
+  }
+
+  &.c-section-title__text--white {
+    color: global.$color-main-4;
+  }
+
+  &.is-single-page {
+    letter-spacing: 2.4px;
+
+    @include global.mq(lg) {
+      letter-spacing: 6.4px;
+    }
+  }
+}

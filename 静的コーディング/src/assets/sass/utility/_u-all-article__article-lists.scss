@@ -1,0 +1,20 @@
+@use "../global" as global;
+.u-all-article__article-lists-all {
+  background-color: global.$color-main-1;
+}
+
+.u-all-article__article-lists-new {
+  background-color: global.$color-accent-1;
+}
+
+.u-all-article__article-lists-tips {
+  background-color: global.$color-accent-2;
+}
+
+.u-all-article__article-lists-interview {
+  background-color: global.$color-accent-4;
+}
+
+.p-all-article__article-lists-news {
+  background-color: global.$color-accent-3;
+}

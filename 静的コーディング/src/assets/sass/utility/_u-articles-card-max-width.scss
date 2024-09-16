@@ -1,0 +1,8 @@
+@use "../global" as global;
+.u-articles-card-max-width {
+  max-width: 299px;
+
+  @include global.mq(lg) {
+    max-width: 302px;
+  }
+}

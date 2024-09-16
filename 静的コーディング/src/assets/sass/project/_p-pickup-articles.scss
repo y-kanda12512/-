@@ -1,0 +1,146 @@
+@use "../global" as global;
+.p-pickup-articles {
+}
+
+.p-pickup-articles___inner {
+}
+
+.p-pickup-articles__swiper {
+  padding-bottom: 58px;
+
+  @include global.mq(lg) {
+    padding-bottom: 48px;
+  }
+}
+
+.p-pickup-articles__swiper-wrapper {
+}
+
+.p-pickup-articles__slide {
+  transition: 0.3s;
+  margin-top: 12px;
+
+  @include global.mq(md) {
+    margin-top: 25px;
+  }
+
+  @include global.mq(lg) {
+    max-height: 550.57px;
+    margin-top: 40px;
+  }
+
+  &.swiper-slide-active {
+    margin-top: 0;
+  }
+
+  // TOPのカードのみ違うスタイルを適用させる
+  .c-articles-card {
+    @include global.mq(lg) {
+      padding: 28px;
+      gap: 16px;
+      max-height: 550.57px;
+    }
+  }
+
+  .c-articles-card__head {
+  }
+
+  .c-articles-card__img {
+    @include global.mq(lg) {
+      img {
+        height: 305.57px;
+      }
+    }
+  }
+
+  .c-articles-card__date {
+    @include global.mq(lg) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+  }
+
+  .c-articles-card__title {
+    @include global.mq(lg) {
+      font-size: 20px;
+      line-height: 1.6;
+      letter-spacing: 1px;
+    }
+  }
+
+  .c-articles-card__category {
+    @include global.mq(lg) {
+      padding: 3px 20px;
+      border-radius: 6px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+  }
+
+  .c-articles-card__tags {
+    @include global.mq(lg) {
+      margin-top: 16px;
+      gap: 13px;
+    }
+  }
+
+  .c-articles-card__tag {
+    @include global.mq(lg) {
+      padding: 2px 10px 4px 8px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+
+  .c-articles-card__tag-text {
+  }
+}
+
+.p-pickup-articles__swiper-button-prev,
+.p-pickup-articles__swiper-button-next {
+  width: 36px;
+  height: 36px;
+  margin-top: -66px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include global.mq(lg) {
+    margin-top: -55px;
+  }
+}
+
+.p-pickup-articles__swiper-button-prev::after,
+.p-pickup-articles__swiper-button-next::after {
+  display: none;
+}
+
+.p-pickup-articles__swiper-button-prev {
+  left: initial;
+  background: url(../img/top-slider-arrow-left.png) no-repeat center center/contain;
+  right: calc(50% + calc((150px / 390px) * 100%));
+
+  @include global.mq(lg) {
+    right: calc(50% + calc((340px / 1440px) * 100%));
+  }
+
+  @include global.mq(xxxl) {
+    right: calc(50% + calc((340px / 1800px) * 100%));
+  }
+}
+
+.p-pickup-articles__swiper-button-next {
+  background: url(../img/top-slider-arrow-right.png) no-repeat center center/contain;
+  left: calc(50% + calc((150px / 390px) * 100%));
+
+  @include global.mq(lg) {
+    left: calc(50% + calc((340px / 1440px) * 100%));
+  }
+
+  @include global.mq(xxxl) {
+    left: calc(50% + calc((340px / 1800px) * 100%));
+  }
+}
